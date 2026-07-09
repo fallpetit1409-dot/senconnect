@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background-color: #f6f3ec;
+    color: #1c1f26;
+    font-family: 'IBM Plex Sans', Inter, system-ui, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Spectral', Georgia, serif;
+    letter-spacing: -0.012em;
+  }
+  ::selection {
+    background-color: #d4a017;
+    color: #0e1b33;
+  }
+}
+
+@layer components {
+  .font-mono-label {
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .ledger-rule {
+    background-image: linear-gradient(to right, transparent, rgba(14, 27, 51, 0.14), transparent);
+    height: 1px;
+  }
+  .field-input {
+    @apply w-full rounded-md border border-ink-200 bg-paper-50 px-3.5 py-2.5 text-ink-700 placeholder:text-ink-300
+           focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 transition;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium
+           transition focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-paper-100
+           disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-primary-700 text-paper-100 hover:bg-primary-800 focus:ring-primary-500;
+  }
+  .btn-accent {
+    @apply btn bg-accent-500 text-ink-900 hover:bg-accent-600 focus:ring-accent-400 font-semibold;
+  }
+  .btn-ghost {
+    @apply btn text-ink-600 hover:bg-paper-200 hover:text-ink-700 focus:ring-ink-200;
+  }
+  .btn-outline {
+    @apply btn border border-ink-200 bg-paper-50 text-ink-700 hover:border-primary-300 hover:text-primary-700 focus:ring-primary-300;
+  }
+  .card {
+    @apply rounded-lg border border-ink-200/70 bg-paper-50 shadow-ledger;
+  }
+}
