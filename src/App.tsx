@@ -9,6 +9,7 @@ import { DashboardPage } from './pages/DashboardPage';
 import { ListingsPage } from './pages/ListingsPage';
 import { PublishListingPage } from './pages/PublishListingPage';
 import { PlaceholderPage } from './pages/PlaceholderPage';
+import { ListingDetailPage } from './pages/ListingDetailPage';
 
 function Router() {
   const [path, navigate] = useRoute();
@@ -24,7 +25,10 @@ function Router() {
       page = <PublishListingPage />;
       break;
     default:
-      switch (root) {
+      if (root === '/annonces' && segments.length > 1) {
+      page = <ListingDetailPage />;
+    } else
+    switch (root) {
         case '/':
           page = <HomePage />;
           break;
