@@ -7,6 +7,7 @@ import { SignUpPage } from './pages/SignUpPage';
 import { LoginPage } from './pages/LoginPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { ListingsPage } from './pages/ListingsPage';
+import { MessagingPage } from './pages/MessagingPage';
 import { PublishListingPage } from './pages/PublishListingPage';
 import { PlaceholderPage } from './pages/PlaceholderPage';
 import { ListingDetailPage } from './pages/ListingDetailPage';
@@ -45,9 +46,12 @@ function Router() {
           page = <ListingsPage />;
           break;
         case '/messagerie':
+          page = <MessagingPage />;
+          break;
         case '/profil':
           page = <PlaceholderPage routeKey={root} />;
           break;
+          
         default:
           page = <NotFound onHome={() => navigate('/')} />;
       }
