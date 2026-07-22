@@ -32,7 +32,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-ink-200/70 bg-paper-100/95 backdrop-blur supports-[backdrop-filter]:bg-paper-100/80">
       <div className="mx-auto flex h-16 max-w-8xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <button onClick={() => navigate('/')} className="flex items-center" aria-label="Accueil Senconnect">
+        <button onClick={() => navigate('/')} className="flex items-center" aria-label="Accueil Sentoile">
           <Logo />
         </button>
 
